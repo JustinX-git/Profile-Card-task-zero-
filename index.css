@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Euphoria+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color:  rgba(191, 233, 255, 0.278);
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #010419;
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+    height: 100vh;
+}
+
+.profile-container{
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 270px;
+    width: 80%;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px hsl(200, 92%, 5%);
+    background-image: linear-gradient(to bottom right, rgba(237, 249, 255, 0.544), 60%, skyblue);
+}
+
+.profile-photo{
+    width: 35%;
+}
+
+.profile-photo img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+/* Profile info section */
+.profile-info{
+    width: 50%;
+}
+
+.data{
+    margin-bottom: .5rem;
+}
+
+.data-title{
+    font-size: 1.3rem;
+   font-weight: bolder;
+}
+
+.list-2, .list-3{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-2 li:nth-child(2) .data-title{
+    text-align: center;
+}
+
+.list-3 li:last-child a{
+    cursor: pointer;
+    padding: .3rem;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: color .4s ease;
+}
+
+.list-3 li:last-child a:first-child:hover{
+    color: rgba(0, 0, 255, 0.445);
+}
+
+.list-3 li:last-child a:nth-child(2):hover{
+    color: rgba(255, 0, 136, 0.445);
+}
+.list-3 li:last-child a:nth-child(3):hover{
+    color: rgba(38, 38, 39, 0.445);
+}
+.list-3 li:last-child a:nth-child(4):hover{
+    color: rgba(34, 21, 88, 0.67);
+}
+.list-3 li:last-child a:last-child:hover{
+    color: rgba(255, 11, 11, 0.615);
+}
+
+svg{
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+    inset: 0;
+    margin: auto;
+}
+
+
+/* Responsivity styles for tablet screens */
+@media(max-width: 900px){
+    .profile-container{
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 60%;
+        align-items: center;
+        padding: .5rem;
+        margin: 2rem 0;
+    }
+
+
+    .profile-photo{
+        width: 90%;
+    }
+    
+    .profile-photo img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 100%;
+    }
+    
+    /* Profile info section */
+    .profile-info{
+        width: 90%;
+    }
+    
+    
+    .list-3 li:last-child a:first-child:hover{
+        color: #fff;
+    }
+
+    .list-3 li:last-child a:nth-child(2):hover{
+        color: #fff;
+    }
+    .list-3 li:last-child a:nth-child(3):hover{
+        color: #fff;
+    }
+    .list-3 li:last-child a:nth-child(4):hover{
+        color: #fff;
+    }
+    .list-3 li:last-child a:last-child:hover{
+        color: #fff;
+    }
+
+    svg{
+         transform: rotate(-90deg);
+        }
+}
+
+/* Responsivity styles for mobile phone screens */
+@media(max-width: 600px){
+    .list-2, .list-3{
+        flex-direction: column;
+    }
+
+    .list-2 li:nth-child(2) .data-title{
+        text-align: left;
+    }
+
+    .list-3 li:last-child {
+       width: 100%;
+       text-align: center;
+    }
+}

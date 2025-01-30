@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Profile Card</title>
+</head>
+<body>
+    <div class="profile-container">
+        
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.36 24"><defs><style>.cls-1{fill:#fff;fill-rule:evenodd;}.cls-2{fill:#f2f2f2;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M9,0H0V24H9V19.78H5.35V4.18H9Z"/><path class="cls-1" d="M15,0h9V24H15V19.78h3.65V4.18H15Z"/><path class="cls-2" d="M42.56,5H46V19h-3.4V13.08H36.8V19H33.4V5h3.4v5.38h5.76ZM58.73,5h3.4V19H57.45L53,8.58V19h-3.4V5h5l4.14,9.6Zm20.63,6.38v2.7H76.8A2.09,2.09,0,0,1,78,16c0,1.84-2.22,3.36-5.5,3.36-4.5,0-7.36-2.94-7.36-7.38s2.74-7.26,7.16-7.26c3.62,0,6.28,2,6,5.56h-3.5a2.32,2.32,0,0,0-2.54-2.76c-2.26,0-3.6,1.8-3.6,4.46s1.44,4.58,3.78,4.58c1.2,0,2.08-.48,2.08-1.18s-1-1.26-2.6-1.26v-2.7Z"/></g></g></svg>
+
+        <div class="profile-photo">
+            <img src="./img/Me.jpg"  data-testid="profilePicture" alt="A potrait photo of me">
+        </div>
+        <h1 class="profile-card-header"></h1>
+        <div class="profile-info">
+         <ul class="list-1">
+         <li class="data">
+            <p class="data-title">Name</p>
+            <p class="data-content" data-testid="fullName">Ikwuegbu Uzochukwu Justin</p>
+         </li>
+         <li class="data">
+            <p class="data-title">Job title</p>
+            <p class="data-content" data-testid="jobTitle">Frontend Developer</p>
+         </li>
+         <li class="data">
+            <p class="data-title">Bio</p>
+            <p class="data-content" data-testid="shortBio"> I'm a 21yr old Nigerian that is a recent graduate from the University of Calabar. I studied a course called Applied geophysics but also picked up and learnt frontend development during my time in school. I am a curious and open minded frontend developer that specialises in creating efficient products that also appeal to aesthetical needs. I value learning and do not shy away from trying new technologies whilst still adhering to core and fundamental industry standards. When not coding I do enjoy reading and gaming.</p>
+         </li>
+               </ul>
+
+               <ul class="list-2">
+                <li class="data">
+                    <p class="data-title">Current location</p>
+                    <p class="data-content" data-testid="currentLocation">Lagos, Nigeria</p>
+                 </li>
+                 <li class="data">
+                    <p class="data-title">Email</p>
+                    <p class="data-content" data-testid="emailAddress">justinjujec2@gmail.com</p>
+                 </li>
+                </ul>
+
+                <ul class="list-3">
+                 <li class="data">
+                    <p class="data-title">UTC time</p>
+                    <span id="UTCtime" data-testid="currentTimeUTC"></span>
+                 </li>
+
+                 <li class="data" data-testid="socialLinks">
+                    <a class="socials" id="facebook"  target="_blank" href="https://www.facebook.com/uzo.ikwuegbu?mibextid=ZbWKwL"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a class="socials" id="instagram"  target="_blank" href="https://instagram.com/uz_iee?igshid=ZDdkNTZiNTM="><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a class="socials" id="github" target="_blank" href="https://github.com/JustinX-git"><i class="fab fa-github-square" aria-hidden="true"></i></a>
+                    <a class="socials" id="linkedin"  target="_blank" href="https://www.linkedin.com/in/justin-ikwuegbu-623960250">In</a>
+                    <a class="socials" id="mail" target="_blank"  href="mailto:justinjujec2@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </li>
+                </ul>
+        
+        </div>
+
+    </div>
+</body>
+
+<script>
+   document.addEventListener("DOMContentLoaded", (e) =>{
+       const date = new Date();
+       e.target.getElementById("UTCtime").textContent = `${date.getUTCHours() < 10 ?  '0' + date.getUTCHours() : date.getUTCHours()}:${date.getUTCMinutes() < 10 ? '0'+ date.getUTCMinutes() : date.getUTCMinutes()}`
+   })
+
+</script>
+</html>
